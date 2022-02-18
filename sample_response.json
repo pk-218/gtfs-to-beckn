@@ -1,0 +1,124 @@
+{
+    "context": {
+        "domain": "nic2004:60212",
+        "country": "IND",
+        "city": "",
+        "action": "on_search",
+        "core_version": "0.9.3",
+        "bap_id": "Test BAP",
+        "bap_uri": "https://beckn.free.beeceptor.com",
+        "transaction_id": "12391830183",
+        "message_id": "2131030183",
+        "timestamp": "2022-02-12T09:55:41.161Z",
+        "bpp_id": "api.sandbox.beckn.juspay.in/bpp/metro/v1",
+        "bpp_uri": "https://metro-bpp.com/"
+    },
+    "message": {
+        "catalog": {
+            "bpp/descriptor": {
+                "name": "BPP"
+            },
+            "bpp/providers": [
+                {
+                    "id": "abc_transit",
+                    "descriptor": {
+                        "name": "ABC Transit Limited"
+                    },
+                    "locations": [
+                        {
+                            "id": "ST01",
+                            "descriptor": {
+                                "name": "Station 1"
+                            },
+                            "station_code": "ST01",
+                            "gps": "10.1099,76.3495"
+                        },
+                        {
+                            "id": "ST05",
+                            "descriptor": {
+                                "name": "Station 5"
+                            },
+                            "station_code": "ST05",
+                            "gps": "10.0727,76.3336"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "id": "sjt",
+                            "descriptor": {
+                                "name": "Single Journey Ticket",
+                                "code": "SJT"
+                            },
+                            "price": {
+                                "currency": "INR",
+                                "value": "20"
+                            },
+                            "location_id": "ST01",
+                            "fulfillment_id": "ST01_TO_ST05",
+                            "matched": true
+                        }
+                    ],
+                    "fulfillments": [
+                        {
+                            "id": "ST01_TO_ST05",
+                            "start": {
+                                "location": {
+                                    "id": "ST01"
+                                },
+                                "time": {
+                                    "timestamp": "2022-02-16T00:26:36.000Z"
+                                }
+                            },
+                            "end": {
+                                "location": {
+                                    "id": "ST05"
+                                },
+                                "time": {
+                                    "timestamp": "2022-02-16T00:37:56.000Z"
+                                }
+                            }
+                        },
+                        {
+                            "id": "ST01_TO_ST05",
+                            "start": {
+                                "location": {
+                                    "id": "ST01"
+                                },
+                                "time": {
+                                    "timestamp": "2022-02-16T01:36:46.000Z"
+                                }
+                            },
+                            "end": {
+                                "location": {
+                                    "id": "ST05"
+                                },
+                                "time": {
+                                    "timestamp": "2022-02-16T01:47:56.000Z"
+                                }
+                            }
+                        },
+                        {
+                            "id": "ST01_TO_ST05",
+                            "start": {
+                                "location": {
+                                    "id": "ST01"
+                                },
+                                "time": {
+                                    "timestamp": "2022-02-16T02:51:55.000Z"
+                                }
+                            },
+                            "end": {
+                                "location": {
+                                    "id": "ST05"
+                                },
+                                "time": {
+                                    "timestamp": "2022-02-16T03:03:36.000Z"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
