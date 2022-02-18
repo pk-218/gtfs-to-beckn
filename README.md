@@ -1,9 +1,10 @@
 # gtfs-to-beckn
-A simple BPP implementation that turns GTFS data into a beckn catalog. Discovery flow is implemented here.
+
+A simple BPP implementation that converts GTFS data into a beckn catalog. Discovery flow is implemented here.
 
 Reads static GTFS data from gtfs-data folder and returns catalog of available tickets between stations including the schedule and fare.
 
-Can also take in the start and end GPS coordinates, finds the closest metro stations to the coordinates and returns ticket information for trips between the them. Current implementation works only for start and end stations within the same trip in the GTFS data. Only the discovery flow (`search` and `on_search`) implemented.
+If `ENABLE_LOCATION_SERVICES` is set as `true` in `/config/config.ts` will take in the start and end GPS coordinates, finds the closest metro stations to the coordinates and returns ticket information for trips between the them. Current implementation works only for start and end stations within the same trip in the GTFS data and does not support transfers.
 
 ### Building the application using Docker 
 
