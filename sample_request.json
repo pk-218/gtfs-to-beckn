@@ -16,12 +16,12 @@
             "fulfillment": {
                 "start": {
                     "location": {
-                        "gps": "ST01"
+                        "station_code": "ST01"
                     }
                 },
                 "end": {
                     "location": {
-                        "gps": "ST05"
+                        "station_code": "ST05"
                     }
                 }
             }

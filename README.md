@@ -1,18 +1,21 @@
 # gtfs-to-beckn
 
-A simple BPP implementation that converts GTFS data into a beckn catalog. Discovery flow is implemented here.
+A simple BPP implementation that converts GTFS data into a beckn catalog. Discovery flow is implemented here. Transfers are currently not supported.
 
 Reads static GTFS data from gtfs-data folder and returns catalog of available tickets between stations including the schedule and fare.
 
-If `ENABLE_LOCATION_SERVICES` is set as `true` in `/config/config.ts` will take in the start and end GPS coordinates, finds the closest metro stations to the coordinates and returns ticket information for trips between the them. Current implementation works only for start and end stations within the same trip in the GTFS data and does not support transfers.
+You can find exact mappings of GTFS to beckn schema [here](./GTFS-TO-BECKN.md).
+
+You can find a general how it works document [here](./HOW-IT-WORKS.md).
+
 
 ### Building the application using Docker 
 
 Run the following command :
-`docker build . -t metro-bpp`
+`docker build . -t gtfs-bpp`
 
 To run the built image run the command :
-`docker run -p 8000:8000 --name metro --env MAPS_KEY=< key > metro-bpp`
+`docker run -p 8000:8000 --name gtfs-bpp-image --env MAPS_KEY=< key > gtfs-bpp`
 
 #### Environment Variables
 
@@ -29,6 +32,7 @@ The following environment variables should be set.
 - `domain` : Default value set as "nic2004:60212"
 - `city` : Default value set as ""
 - `core_version` :  Default value set as "0.9.3"
+- `ENABLE_LOCATION_SERVICES` : If `true` will take in the start and end GPS coordinates, finds the closest stations to the coordinates and returns ticket information for trips between the them. Else will return a list of all stops if GPS coordinates are passed.
 
 #### Optional
 - `THRESHOLD_DISTANCE_KM` : Threshold to select next closest station (default: 0.50)

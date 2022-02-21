@@ -40,6 +40,6 @@ import { setupData } from './db/models/setupData';
   app.use('/auth', require("./routes/auth"));
   app.use('/health', require("./routes/health"));
   app.listen(PORT, () => {
-    console.log(`Metro BPP listening on port ${PORT}`)
+    console.log(`Transit BPP listening on port ${PORT}`)
   })
 })();

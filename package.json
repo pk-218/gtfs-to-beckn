@@ -1,7 +1,7 @@
 {
-  "name": "metro_bpp",
+  "name": "gtfs_bpp",
   "version": "1.0.0",
-  "description": "BPP for Kochi Metro Rail Limited",
+  "description": "BPP which takes GTFS data and converts it into Beckn Schema",
   "main": "src/index.js",
   "scripts": {
     "start": "env-cmd -f ./config/prod.env node dist/src/index.js",

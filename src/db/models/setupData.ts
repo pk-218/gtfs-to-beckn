@@ -9,7 +9,6 @@ import { StopTimes } from "./StopTimes.model";
 import { Trips } from "./Trips.model";
 import { Agency } from './Agency.model';
 
-//./metro-Open-Data/
 export const setupData = async (data_path: string) => {
 
     //Clear database
