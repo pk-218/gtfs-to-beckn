@@ -1,13 +1,40 @@
-# gtfs-to-beckn
+# GTFS to beckn Adapter
 
-A simple BPP implementation that converts GTFS data into a beckn catalog. Discovery flow is implemented here. Transfers are currently not supported.
+## Release History
 
-Reads static GTFS data from gtfs-data folder and returns catalog of available tickets between stations including the schedule and fare.
+| Version | Release Date   | Contributors    |
+|---------|----------------|-----------------|
+| 0.5     | 21st Feb, 2022 | Nirmal Rajeevan |
+
+## Changelog
+
+None
+
+## Overview
+
+A simple BPP implementation that converts [GTFS](https://gtfs.org) data into a [beckn](https://github.com/beckn/protocol-specifications) catalog. Discovery flow is implemented here. Transfers are currently not supported.
+
+This application reads static GTFS data from gtfs-data folder and returns catalog of available fare products between stations including the schedule and fare.
 
 You can find exact mappings of GTFS to beckn schema [here](./GTFS-TO-BECKN.md).
 
 You can find a general how it works document [here](./HOW-IT-WORKS.md).
 
+## Installation
+
+### Installation via CLI
+
+This application can be installed just like any other NodeJS application by running,
+
+```
+npm install
+```
+
+To build this application, just run
+
+```
+npm run build
+```
 
 ### Building the application using Docker 
 
